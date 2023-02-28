@@ -866,5 +866,5 @@ config = '''<config>
 ```
 ```
 res = conn.edit(config)
-     print(res)
+print(res)
 ```
