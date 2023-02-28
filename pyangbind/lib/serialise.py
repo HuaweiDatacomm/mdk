@@ -414,7 +414,7 @@ class pybindIETFXMLEncoder(object):
         ietf_tree_xml_func = make_generate_ietf_tree(pybindIETFXMLEncoder.yname_ns_func)
         tree = ietf_tree_xml_func(obj, flt=filter)
         preprocessed = XmlYangDataSerialiser().preprocess_element(tree)
-        return cls.generate_xml_tree(obj._yang_name, obj._yang_namespace, preprocessed)
+        return cls.generate_xml_tree(obj._yang_name, obj._namespace, preprocessed)
 
     @classmethod
     def serialise(cls, obj, filter=True, pretty_print=True):
