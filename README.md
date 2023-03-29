@@ -34,7 +34,7 @@ chmod +x generate_py.sh
 ```
 
 ## Use Python Class to get configuration of huawei's device
-huawei_debug.py is used as an example.
+huawei_debug.py is used as an example.  
 1.modify the netconf.json file and configure netconf connection
 ```
 cd mdk/conf
@@ -100,7 +100,7 @@ print(position3.get())
 ## Use Python Class to deliver packets to huawei's device
 1.update python class
 ```
-position3.debug.memory-infos.memory-info['3'].overload_threshold = 80
+position3.debug.memory_infos.memory_info['3'].overload_threshold = 80
 ```
 2.deliver packets. If the change was applied successfully should return ok 
 ```
