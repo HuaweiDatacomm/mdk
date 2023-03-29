@@ -4,8 +4,8 @@
 from lxml.etree import QName
 from pyangbind.lib.serialise import *
 from ncclient import manager
-from lxml import etree
-import parsejson
+from lxml import etre
+from yang import parsejson
 
 class MDK:
 
