@@ -10,8 +10,6 @@ do
     yangname=${temp_file%*.yang}
     yangnewname=${yangname//-/_}
     pyang --plugindir $PYBINDPLUGIN -f pybind -o $SDIR/$yangnewname.py $yangname.yang
-    str="from "${yangnewname}" import *"
-    sed -i "5i ${str} " $TEMP/yang/main.py
   fi
 done
 
