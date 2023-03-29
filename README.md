@@ -34,18 +34,23 @@ chmod +x generate_py.sh
 ```
 
 ## Use Python Class to get configuration of huawei's device
-huawei_debug.py is used as an example.  
-1.import huawei_debug and mdk.
+huawei_debug.py is used as an example.
+1.modify the netconf.json file and configure netconf connection
 ```
-import yang.huawei_debug
-import yang.mdk
+cd mdk/conf
+vim netconf.json
 ```
-2.create instance object.
+2.import huawei_debug and mdk.
+```
+from yang import huawei_debug
+from yang import mdk
+```
+3.create instance object.
 ```
 obj = huawei_debug.huawei_debug() 
 kit = mdk.MDK()
 ```
-3.get configuration by MDK.
+4.get configuration by MDK.
 
 ```
 config_obj = kit.getconfig(python_obj=obj.debug, binding=huawei_debug, entrance_name='huawei-debug')
