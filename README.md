@@ -72,7 +72,7 @@ print(config_obj.get())
 <br>'service-cpu-infos': {'service-cpu-info': OrderedDict()}, 'board-resouce-states': {'board-resouce-state': OrderedDict()}}}
 </details>
 
-Note: unique key is '3','4','17','18'
+***Note***: unique key is '3','4','17','18'
 
 4.get details.New objects are added by calling .add() and passing unique key as an argument.
 ```
@@ -97,22 +97,15 @@ print(position3.get())
 ```
 position3.debug.memory-infos.memory-info['3'].overload_threshold = 80
 ```
-2.deliver packets
+2.deliver packets. If the change was applied successfully should return ok 
 ```
 xpath = "/ns:debug/ns:memory-infos/ns:memory-info[ns:position='3']"
 ns = {'ns': 'urn:huawei:yang:huawei-debug'}
 kit.merge(python_obj=obj.debug, xpath=xpath, namespace=ns)
 ```
-
-<details markdown="1">
-<summary>result:</summary>
-<rpc-reply message-id="urn:uuid:e949d577-0d58-46e8-9618-0171d4139d7e">
-  <ok/>
-</rpc-reply>
-</details>
-
-xpath: need user to add   
-merge: modifies or creates data in the database. This is the default operation.  
-create: adds configuration data to the configuration database only if such data does not exist. If the configuration data already exists, is returned, in which the value is data-exists.  
-delete: deletes a specified configuration data record from the configuration database. If the data exists, it is deleted. If the data does not exist, is returned, in which the value is data-missing.  
-replace: replaces existing data or creates data that does not exist in the database.
+Note: the xpath is similar to the file path in the file management system. Users can update xpath based on Python objects.  
+MDK provides four methods: merge, create, delete,replace.  
+***merge***: modifies or creates data in the database. This is the default operation.  
+***create***: adds configuration data to the configuration database only if such data does not exist. If the configuration data already exists, is returned, in which the value is data-exists.  
+***delete***: deletes a specified configuration data record from the configuration database. If the data exists, it is deleted. If the data does not exist, is returned, in which the value is data-missing.  
+***replace***: replaces existing data or creates data that does not exist in the database.
