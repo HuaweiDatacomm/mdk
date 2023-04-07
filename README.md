@@ -21,7 +21,6 @@ Required Python package:pyang, bitarray, lxml, regex, six, enum34, ncclient, pya
 2.Install required Python package:
 ```
  pip3 install -r requirments.txt
- python3 setup.py install
 ```
 
 ## Generate Yang modules to Python Class
@@ -79,7 +78,7 @@ print(config_obj.get())
 
 ***Note***: unique key is '3','4','17','18'
 
-4.get details.New objects are added by calling .add() and passing unique key as an argument.
+5.get details.New objects are added by calling .add() and passing unique key as an argument.
 ```
 memory_info_position3 = obj.debug.memory_infos.memory_info.add('3')
 position3 = kit.getconfig(python_obj=obj.debug, binding=huawei_debug, entrance_name='huawei-debug')
