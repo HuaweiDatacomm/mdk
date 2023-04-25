@@ -47,7 +47,7 @@ chmod +x generate_py.sh
 1.modify the mdk.json  
 2.import mdk.py and python class   
 3.create mdk and python class instance object  
-4.get configuration by MDK
+4.get configuration by MDK  
 5.new objects are added by calling .add() and passing unique key as an argument.      
 6.update python class  
 7.deliver packets  
