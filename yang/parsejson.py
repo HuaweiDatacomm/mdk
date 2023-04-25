@@ -6,8 +6,8 @@ import sys
 import json
 
 def get_config_data():
-    if os.path.exists(os.path.abspath(os.path.join(os.path.dirname(__file__), "../conf", "netconf.json"))):
-        conf_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../conf", "netconf.json"))
+    if os.path.exists(os.path.abspath(os.path.join(os.path.dirname(__file__), "../conf", "mdk.json"))):
+        conf_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../conf", "mdk.json"))
         with open(conf_path, 'r') as f:
             try:
                 data = json.load(f)
